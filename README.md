@@ -19,3 +19,11 @@ Pour build :
 
 Pour démarrer le projet build :
 `java -jar indexSante-0.0.1-SNAPSHOT.jar`
+
+## DOC
+
+Doc API :
+http://localhost:8080/api-docs
+
+Swagger :
+http://localhost:8080/swagger-ui/index.html
