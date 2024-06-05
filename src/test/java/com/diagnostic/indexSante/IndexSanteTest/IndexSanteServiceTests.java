@@ -56,4 +56,13 @@ public class IndexSanteServiceTests {
         assertEquals(expected, result);
     }
 
+    @Test
+    public void testIsMultipleOf() {
+        boolean resultTrue = indexSanteService.isMultipleOf(15, 5);
+        assertEquals(true, resultTrue);
+
+        boolean resultFalse = indexSanteService.isMultipleOf(2, 5);
+        assertEquals(false, resultFalse);
+    }
+
 }
