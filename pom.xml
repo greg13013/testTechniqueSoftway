@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.diagnostic</groupId>
-	<artifactId>capteur</artifactId>
+	<artifactId>indexSante</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>capteur</name>
+	<name>indexSante</name>
 	<description>Test technique softway capteur index sante</description>
 	<properties>
 		<java.version>17</java.version>
