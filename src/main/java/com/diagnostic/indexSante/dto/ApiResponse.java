@@ -1,4 +1,4 @@
-package com.diagnostic.indexSante.model;
+package com.diagnostic.indexSante.dto;
 
 import lombok.Data;
 

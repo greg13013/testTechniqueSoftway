@@ -16,7 +16,7 @@ public class IndexSanteServiceTests {
     private IndexSanteService indexSanteService;
 
     @Test
-    public void testGetUniteMedicaleByIndexSanteCardiologie() {
+    public void the_service_retrieve_cardiology() {
 
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle();
 
@@ -26,7 +26,7 @@ public class IndexSanteServiceTests {
     }
 
     @Test
-    public void testGetUniteMedicaleByIndexSanteTraumatologie() {
+    public void the_service_retrieve_traumatology() {
 
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle();
 
@@ -36,7 +36,7 @@ public class IndexSanteServiceTests {
     }
 
     @Test
-    public void testGetUniteMedicaleByIndexSanteOther() {
+    public void the_service_retrieve_other() {
 
         String expected = EnumSalleWithIndexSante.SALLE_WITH_OTHER_INDEX_SANTE.getSalle();
 
@@ -46,7 +46,7 @@ public class IndexSanteServiceTests {
     }
 
     @Test
-    public void testGetUniteMedicaleByIndexSanteWithTraumaAndCardio() {
+    public void the_service_retrieve_cardiology_and_traumatology() {
 
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle() + ","
                 + EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle();
@@ -57,10 +57,13 @@ public class IndexSanteServiceTests {
     }
 
     @Test
-    public void testIsMultipleOf() {
+    public void the_service_retrieve_true_if_multiple() {
         boolean resultTrue = indexSanteService.isMultipleOf(15, 5);
         assertEquals(true, resultTrue);
+    }
 
+    @Test
+    public void the_service_retrieve_false_if_multiple() {
         boolean resultFalse = indexSanteService.isMultipleOf(2, 5);
         assertEquals(false, resultFalse);
     }

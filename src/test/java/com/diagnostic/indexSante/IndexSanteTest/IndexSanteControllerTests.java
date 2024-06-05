@@ -20,24 +20,24 @@ public class IndexSanteControllerTests {
         private MockMvc mockMvc;
 
         @Test
-        public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsCardiologie() throws Exception {
-                mockMvc.perform(get("/api/index-sante?indexSante=3"))
+        public void the_consumer_get_cardiology() throws Exception {
+                mockMvc.perform(get("/api/index-sante/3"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
                                                 is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3
                                                                 .getSalle())));
         }
 
         @Test
-        public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsTraumatologie() throws Exception {
-                mockMvc.perform(get("/api/index-sante?indexSante=5"))
+        public void the_consumer_get_traumatology() throws Exception {
+                mockMvc.perform(get("/api/index-sante/5"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
                                                 is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5
                                                                 .getSalle())));
         }
 
         @Test
-        public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsCardiologieAndTraumatologie() throws Exception {
-                mockMvc.perform(get("/api/index-sante?indexSante=15"))
+        public void the_consumer_get_cardiology_and_traumatology() throws Exception {
+                mockMvc.perform(get("/api/index-sante/15"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
                                                 is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3
                                                                 .getSalle()
@@ -47,8 +47,8 @@ public class IndexSanteControllerTests {
         }
 
         @Test
-        public void testGetUniteMedicaleByIndexSanteIsNotOkParamsMissing() throws Exception {
-                mockMvc.perform(get("/api/index-sante"))
+        public void the_consumer_get_error() throws Exception {
+                mockMvc.perform(get("/api/index-sante/test"))
                                 .andExpect(status().isBadRequest());
         }
 }
