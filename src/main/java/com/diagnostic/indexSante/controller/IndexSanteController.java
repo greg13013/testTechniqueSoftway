@@ -24,7 +24,6 @@ public class IndexSanteController {
     @GetMapping("/index-sante/{indexSante}")
     public ResponseEntity<ApiResponse<String>> getUniteMedicaleByIndexSante(
             @PathVariable("indexSante") Integer indexSante) {
-
         String result = indexSanteService.getUniteMedicaleByIndexSante(indexSante);
         ApiResponse<String> response = new ApiResponse<>(result);
 

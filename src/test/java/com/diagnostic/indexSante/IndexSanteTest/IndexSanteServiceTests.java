@@ -17,42 +17,30 @@ public class IndexSanteServiceTests {
 
     @Test
     public void the_service_retrieve_cardiology() {
-
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle();
-
         String result = indexSanteService.getUniteMedicaleByIndexSante(3);
-
         assertEquals(expected, result);
     }
 
     @Test
     public void the_service_retrieve_traumatology() {
-
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle();
-
         String result = indexSanteService.getUniteMedicaleByIndexSante(5);
-
         assertEquals(expected, result);
     }
 
     @Test
     public void the_service_retrieve_other() {
-
         String expected = EnumSalleWithIndexSante.SALLE_WITH_OTHER_INDEX_SANTE.getSalle();
-
         String result = indexSanteService.getUniteMedicaleByIndexSante(1);
-
         assertEquals(expected, result);
     }
 
     @Test
     public void the_service_retrieve_cardiology_and_traumatology() {
-
         String expected = EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle() + ","
                 + EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle();
-
         String result = indexSanteService.getUniteMedicaleByIndexSante(15);
-
         assertEquals(expected, result);
     }
 
