@@ -1,4 +1,4 @@
-package com.diagnostic.capteur.exception;
+package com.diagnostic.indexSante.exception;
 
 public class ErrorHandler extends RuntimeException {
 

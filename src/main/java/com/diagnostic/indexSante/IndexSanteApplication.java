@@ -1,13 +1,13 @@
-package com.diagnostic.capteur;
+package com.diagnostic.indexSante;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CapteurApplication {
+public class IndexSanteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CapteurApplication.class, args);
+		SpringApplication.run(IndexSanteApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.diagnostic.capteur.IndexSanteTest;
+package com.diagnostic.indexSante.IndexSanteTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.diagnostic.capteur.common.constant.SalleByIndexSante;
-import com.diagnostic.capteur.service.IndexSanteService;
+import com.diagnostic.indexSante.common.constant.SalleByIndexSante;
+import com.diagnostic.indexSante.service.IndexSanteService;
 
 @SpringBootTest
 public class IndexSanteServiceTests {

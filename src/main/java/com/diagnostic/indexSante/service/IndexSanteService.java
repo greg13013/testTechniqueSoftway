@@ -1,10 +1,10 @@
-package com.diagnostic.capteur.service;
+package com.diagnostic.indexSante.service;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.diagnostic.capteur.common.constant.SalleByIndexSante;
+import com.diagnostic.indexSante.common.constant.SalleByIndexSante;
 
 import lombok.Data;
 

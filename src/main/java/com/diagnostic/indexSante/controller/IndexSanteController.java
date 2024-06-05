@@ -1,10 +1,10 @@
-package com.diagnostic.capteur.controller;
+package com.diagnostic.indexSante.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.diagnostic.capteur.exception.ErrorHandler;
-import com.diagnostic.capteur.model.ApiResponse;
-import com.diagnostic.capteur.service.IndexSanteService;
+import com.diagnostic.indexSante.exception.ErrorHandler;
+import com.diagnostic.indexSante.model.ApiResponse;
+import com.diagnostic.indexSante.service.IndexSanteService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.diagnostic.capteur.model;
+package com.diagnostic.indexSante.model;
 
 import org.springframework.http.HttpStatus;
 
