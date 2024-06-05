@@ -31,7 +31,7 @@ public class IndexSanteController {
         }
 
         String result = indexSanteService.getUniteMedicaleByIndexSante(indexSante);
-        ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), HttpStatus.OK, result);
+        ApiResponse<String> response = new ApiResponse<>(result);
 
         return ResponseEntity.ok(response);
     }

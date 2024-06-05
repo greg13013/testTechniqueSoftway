@@ -12,8 +12,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ErrorHandler.class)
     public ResponseEntity<?> handleMissingParameterException(ErrorHandler ex) {
-        ApiResponse<String> response = new ApiResponse<>(HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST,
-                ex.getMessage());
+        ApiResponse<String> response = new ApiResponse<>(ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 }
