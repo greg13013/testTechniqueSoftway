@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.diagnostic.indexSante.common.constant.SalleByIndexSante;
+import com.diagnostic.indexSante.common.constant.EnumSalleWithIndexSante;
 
 import lombok.Data;
 
@@ -15,22 +15,22 @@ public class IndexSanteService {
     public String getUniteMedicaleByIndexSante(Integer indexSante) {
 
         boolean isMultipleOf3 = isMultipleOf(indexSante,
-                SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getIndexSante());
+                EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getIndexSante());
         boolean isMultipleOf5 = isMultipleOf(indexSante,
-                SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getIndexSante());
+                EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getIndexSante());
 
         ArrayList<String> listUniteMedicale = new ArrayList<String>();
 
         if (isMultipleOf3) {
-            listUniteMedicale.add(SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle());
+            listUniteMedicale.add(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle());
         }
 
         if (isMultipleOf5) {
-            listUniteMedicale.add(SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle());
+            listUniteMedicale.add(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle());
         }
 
         if (listUniteMedicale.isEmpty()) {
-            return SalleByIndexSante.SALLE_WITH_OTHER_INDEX_SANTE.getSalle();
+            return EnumSalleWithIndexSante.SALLE_WITH_OTHER_INDEX_SANTE.getSalle();
         }
 
         String resultUniteMedical = String.join(",", listUniteMedicale);

@@ -11,7 +11,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.diagnostic.indexSante.common.constant.SalleByIndexSante;
+import com.diagnostic.indexSante.common.constant.EnumSalleWithIndexSante;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -23,23 +23,26 @@ public class IndexSanteControllerTests {
         public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsCardiologie() throws Exception {
                 mockMvc.perform(get("/api/index-sante?indexSante=3"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
-                                                is(SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle())));
+                                                is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3
+                                                                .getSalle())));
         }
 
         @Test
         public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsTraumatologie() throws Exception {
                 mockMvc.perform(get("/api/index-sante?indexSante=5"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
-                                                is(SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5.getSalle())));
+                                                is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5
+                                                                .getSalle())));
         }
 
         @Test
         public void testGetUniteMedicaleByIndexSanteIsOkAndServiceIsCardiologieAndTraumatologie() throws Exception {
                 mockMvc.perform(get("/api/index-sante?indexSante=15"))
                                 .andExpect(status().isOk()).andExpect(jsonPath("$.data",
-                                                is(SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3.getSalle()
+                                                is(EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3
+                                                                .getSalle()
                                                                 + ","
-                                                                + SalleByIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5
+                                                                + EnumSalleWithIndexSante.SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5
                                                                                 .getSalle())));
         }
 

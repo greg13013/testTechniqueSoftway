@@ -1,6 +1,6 @@
 package com.diagnostic.indexSante.common.constant;
 
-public enum SalleByIndexSante {
+public enum EnumSalleWithIndexSante {
 
     SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_3("Cardiologie", 3),
     SALLE_WITH_INDEX_SANTE_MULTIPLE_OF_5("Traumatologie", 5),
@@ -10,7 +10,7 @@ public enum SalleByIndexSante {
     private String salle;
     private Integer indexSante;
 
-    private SalleByIndexSante(String salle, Integer indexSante) {
+    private EnumSalleWithIndexSante(String salle, Integer indexSante) {
         this.salle = salle;
         this.indexSante = indexSante;
     }
